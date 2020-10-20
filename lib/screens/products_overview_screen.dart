@@ -50,6 +50,7 @@ class ProductsOcerviewScreen extends StatelessWidget {
               id: loadedProducts[index].id,
               title: loadedProducts[index].title,
               imageUrl: loadedProducts[index].imageUrl,
+              price: loadedProducts[index].price,
             );
           },
           // grid의 column 개수
