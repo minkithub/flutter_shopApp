@@ -1,7 +1,7 @@
 // product 정보를 provider로 불러오는 작업.
 
 import 'package:flutter/material.dart';
-import '../models/product.dart';
+import 'product.dart';
 
 class Products with ChangeNotifier {
   // items을 지역변수로 설정하여 외부에서의 접근을 허용하지 않음
@@ -37,7 +37,11 @@ class Products with ChangeNotifier {
   ];
 
   List<Product> get items {
-    return [..._items];
+    return _items;
+  }
+
+  Product findById(String id) {
+    return _items.firstWhere((element) => element.id == id);
   }
 
   // 본격적으로 provider를 사용하는 것으로써 items의 변화를 캐치하는 함수.

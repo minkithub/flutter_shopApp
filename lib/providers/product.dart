@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 // blueprint of product
-class Product {
+class Product with ChangeNotifier {
   final String id;
   final String title;
   final String description;

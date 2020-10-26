@@ -17,8 +17,10 @@ class ProductItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
+            // ProductDetailScreen에 id 변수를 넘겨줌
             Navigator.of(context)
-                .pushNamed(ProductDetailScreen.id, arguments: title);
+                .pushNamed(ProductDetailScreen.id, arguments: id);
+            print(id);
           },
           child: Image.network(
             imageUrl,
